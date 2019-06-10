@@ -100,16 +100,16 @@ console.log(intern[4].multiplyNums(3,4));
 const parent = {
   name: "Susan",
   age: 70,
-  speak: () => {return `My name is ${this.name}`},
+    speak: function(){console.log(`My name is ${this.name}`)},
   child: {
     name: "George",
     age: 50,
-    speak: () => {return `My name is ${this.name}`}
+    speak: function(){console.log(`My name is ${this.name}`)}
   },
   grandchild: {
     name: "Sam",
-    age: 30
-    speak: () => {return `My name is ${this.name}`}
+    age: 30,
+    speak: function(){console.log(`My name is ${this.name}`)}
   }
 }
 
@@ -131,4 +131,8 @@ parent.speak();
 
 // Have the child speak
 
+parent.child.speak();
+
 // Have the grandchild speak
+
+parent.grandchild.speak();
